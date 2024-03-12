@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 dotenv.config();
 export default function connectDB() {
   const url = process.env.MONGODB_URI;
-
+  console.log(url)
   try {
     mongoose.connect(url);
   } catch (err) {
