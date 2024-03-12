@@ -21,6 +21,10 @@ app.get('/', (req, res) => {
   res.send('Yay!! Backend of wanderlust app is now accessible ');
 });
 
+app.get('/conn', (req, res) => {
+  res.send(process.env.MONGODB_URI);
+});
+
 app.listen(port, () => {
   console.log(`Server is running on port ${port}`);
 });
