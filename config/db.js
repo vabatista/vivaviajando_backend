@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 dotenv.config();
 export default function connectDB() {
   const url = process.env.MONGODB_URI;
-  console.log(url)
+  
   try {
     mongoose.connect(url);
   } catch (err) {
@@ -14,7 +14,7 @@ export default function connectDB() {
   const dbConnection = mongoose.connection;
 
   dbConnection.once('open', () => {
-    console.log(`Database connected: ${url}`);
+    console.log(`Database connected`);
   });
 
   dbConnection.on('error', (err) => {

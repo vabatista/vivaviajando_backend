@@ -1,11 +1,15 @@
 export const validCategories = [
-    'Travel',
-    'Nature',
-    'City',
-    'Adventure',
-    'Beaches',
-    'Landmarks',
-    'Mountains',
+    'Roteiro',
+    'Europa',
+    'Brasil',
+    'Dicas',
+    'Gastronomia',
+    'Destino',
+    'Nordeste',
+    'Eventos',
+    'América do Sul',
+    'África',
+    'Ásia'
 ];
 export const HTTP_STATUS = {
     OK: 200,

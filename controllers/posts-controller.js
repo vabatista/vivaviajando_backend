@@ -65,6 +65,7 @@ export const getPostByCategoryHandler = async (req, res) => {
   const category = req.params.category;
   try {
     // Validation - check if category is valid
+    console.log(validCategories, category)
     if (!validCategories.includes(category)) {
       return res.status(HTTP_STATUS.BAD_REQUEST).json({ message: RESPONSE_MESSAGES.POSTS.INVALID_CATEGORY });
     }

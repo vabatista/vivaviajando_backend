@@ -3,3 +3,4 @@ coverage/
 .idea/
 .env
 github_token.txt
+google_oauth_client.json

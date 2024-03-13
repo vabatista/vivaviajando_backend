@@ -4,7 +4,7 @@ import connectDB from './config/db.js';
 import cors from 'cors';
 import compression from 'compression';
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5050;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
