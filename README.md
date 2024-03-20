@@ -1,20 +1,31 @@
 # Introduction 
-TODO: Give a short introduction of your project. Let this section explain the objectives or the motivation behind this project. 
+This is the source code of my travel Blog. It was forked from [this repo](https://github.com/krishnaacharyaa/wanderlust), but I made several modificiations:
+1 - splitted the project into two repositories for the backend and frontend. This make easier to deploy in containers.
+2 - Added new Google Analytics tags
+3 - Added a footer for "about us" page
+4 - Removed VITE framework because I had many troubles with it to deploy on Azure.
+
+Currently this project is deployed on Azure, and you can access it through the following link:
+[https://www.vivaviajando.blog.br/](https://www.vivaviajando.blog.br/)
+
+![home page screenshot](https://vvstorage13eua.blob.core.windows.net/vv-other/cover-screenshot.png)
 
 # Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+This app is build in React (frontend) + Node.js Express (backend). 
 
-# Build and Test
-TODO: Describe and show how to build your code and run the tests. 
+To use this software it is pretty simple. You just need to clone the repository and run the following commands:
+1 - create an .env file for backend with `MONGOD_URI` variable pointing to your MongoDB database. I used the free tier of MongoDB Atlas.
+2 - create an .env file for frontend with these variables:
+```
+REACT_APP_API_PATH="http://localhost:5050"
+REACT_APP_GA_ID="G-XXXXXXX"
+REACT_APP_GA_CLIENT_ID="YOURID.apps.googleusercontent.com"
+REACT_APP_DISQUS_APP_ID="YOURID"
+```
+I used free tier of Disqus and Google Analytics. You can create an account and get these variables for free.
 
-# Contribute
-TODO: Explain how other users and developers can contribute to make your code better. 
+2 - run:
+```npm install```
+```npm run dev (for backend)```
+```npm start (for frontend)```
 
-If you want to learn more about creating good readme files then refer the following [guidelines](https://docs.microsoft.com/en-us/azure/devops/repos/git/create-a-readme?view=azure-devops). You can also seek inspiration from the below readme files:
-- [ASP.NET Core](https://github.com/aspnet/Home)
-- [Visual Studio Code](https://github.com/Microsoft/vscode)
-- [Chakra Core](https://github.com/Microsoft/ChakraCore)
