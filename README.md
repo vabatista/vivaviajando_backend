@@ -1,5 +1,6 @@
 # Introduction 
 This is the source code of my travel Blog. It was forked from [this repo](https://github.com/krishnaacharyaa/wanderlust), but I made several modificiations:
+
 1 - splitted the project into two repositories for the backend and frontend. This make easier to deploy in containers.
 2 - Added new Google Analytics tags
 3 - Added a footer for "about us" page
